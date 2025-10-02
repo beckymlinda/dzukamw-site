@@ -22,23 +22,5 @@ window.addEventListener('scroll', function() {
         navbar.classList.remove('scrolled');
     }
 });
-
-// Optional: simple fade-in effect for sections on scroll
-const sections = document.querySelectorAll('section');
-const options = { threshold: 0.2 };
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add('fade-in');
-            observer.unobserve(entry.target);
-        }
-    });
-}, options);
-
-sections.forEach(section => {
-    section.classList.add('opacity-0'); // initial state
-    observer.observe(section);
-});
-
-
+ 
 
