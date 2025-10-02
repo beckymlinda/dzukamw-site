@@ -13,7 +13,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Optional: Change navbar color on scroll
+// Change navbar color on scroll
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
@@ -22,6 +22,11 @@ window.addEventListener('scroll', function() {
         navbar.classList.remove('scrolled');
     }
 });
- 
 
-// Optional: Initialize Bootstrap tooltips if needed 
+// Optional: Initialize Bootstrap tooltips if needed
+document.addEventListener('DOMContentLoaded', function () {
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+        new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+});

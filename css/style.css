@@ -57,7 +57,6 @@ html {
     pointer-events: none;  /* THIS ALLOWS BUTTONS TO BE CLICKABLE */
 }
 
-
 #home .content {
     position: relative;
     z-index: 1;
@@ -67,6 +66,7 @@ h1 {
     color: #008080;
     margin-top: -20px;
 }
+
 #pp {
     color: #fff;
     font-size: 1.5rem;
@@ -142,7 +142,6 @@ footer a:hover {
 section {
     padding: 80px 10px 40px 10px; /* top, right, bottom, left */
 }
- 
 
 /* Services Section */
 #services {
@@ -261,12 +260,9 @@ section {
     }
 }
 
-
-
 #services .card > img.card-img-top {
     object-fit: contain !important;
     height: auto;           /* allow height to grow naturally */
     max-height: 220px;      /* optional max height */
     width: 100%;
 }
-
