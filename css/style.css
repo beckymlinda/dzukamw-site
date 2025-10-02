@@ -1,0 +1,284 @@
+/* Reset & Base */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #FFF5E5;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* adjust to navbar height */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #008080; /* soft sunrise color */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    transition: background-color 0.3s ease;
+    padding: 0.8rem 1rem;
+}
+
+.navbar.scrolled {
+    background-color: #F2C57C;
+}
+
+.navbar .nav-link {
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #FAD6A5;
+}
+
+/* Hero Section */
+#home {
+    background: url('../images/free.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#home::after {
+    content: "";
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    pointer-events: none;  /* THIS ALLOWS BUTTONS TO BE CLICKABLE */
+}
+
+
+#home .content {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    color: #008080;
+    margin-top: -20px;
+}
+#pp {
+    color: #fff;
+    font-size: 1.5rem;
+    position: relative;
+    top: -20px; /* moves it up */
+    font-weight: bold;
+}
+
+/* Section Titles */
+h2 {
+    color: #FF7E5F;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Cards */
+.card {
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #FFF5E5;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #FF7E5F;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #FEB47B;
+    color: #fff;
+}
+
+.btn-dark {
+    background-color: #FF7E5F;
+    border: none;
+}
+
+.btn-dark:hover {
+    background-color: #FEB47B;
+    color: #fff;
+}
+
+/* Forms */
+.form-control, .form-select, textarea {
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+/* Footer */
+footer {
+    background-color: #008080;
+    color: #FFF5E5;
+    text-align: center;
+}
+
+footer a {
+    color: #FEB47B;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Sections spacing */
+section {
+    padding: 80px 10px 40px 10px; /* top, right, bottom, left */
+}
+
+/* Fade-in animations */
+.opacity-0 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Services Section */
+#services {
+    background-color: #fff5e5; /* light warm background */
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* Section heading */
+#services h2 {
+    color: #FF7E5F;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#services .lead {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Cards */
+#services .card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    background-color: #fff; 
+}
+
+#services .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Card Images */
+#services .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Card Titles */
+#services .card-title {
+    color: #008080;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Card Text */
+#services .card-text {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+/* List inside cards */
+#services ul {
+    padding-left: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+#services ul li {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    color: #333;
+}
+
+/* Highlight important text */
+#services ul li strong {
+    color: #FF7E5F;
+}
+
+/* Call-to-Action Button at the bottom */
+#services .btn-primary {
+    background-color: #FF7E5F;
+    border: none;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: background 0.3s ease;
+}
+
+#services .btn-primary:hover {
+    background-color: #FEB47B;
+    color: #fff;
+}
+
+/* "Why Work with Dzuka" text */
+#services h3 {
+    color: #008080;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#services p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    #services .card-img-top {
+        height: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    #services h2 {
+        font-size: 2rem;
+    }
+    #services h3 {
+        font-size: 1.5rem;
+    }
+    #services .card-img-top {
+        height: 150px;
+    }
+}
+
+
+
+#services .card > img.card-img-top {
+    object-fit: contain !important;
+    height: auto;           /* allow height to grow naturally */
+    max-height: 220px;      /* optional max height */
+    width: 100%;
+}
+
